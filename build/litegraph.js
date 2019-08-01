@@ -10594,10 +10594,6 @@ LGraphNode.prototype.executeAction = function(action)
     }
 })(this);
 
-if (typeof exports != "undefined") {
-    exports.LiteGraph = this.LiteGraph;
-}
-
 //Creates an interface to access extra features from a graph (like play, stop, live, etc)
 function Editor(container_id, options) {
     options = options || {};
@@ -11783,3 +11779,7 @@ LiteGraph.Editor = Editor;
 
     LiteGraph.registerNodeType("basic/script", NodeScript);
 })(this);
+
+if (typeof exports != "undefined") {
+    exports.LiteGraph = this.LiteGraph;
+}

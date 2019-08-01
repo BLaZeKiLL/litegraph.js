@@ -225,6 +225,9 @@ export const LiteGraph: {
         }
     >;
 
+    /** Editor constructor */
+    Editor(container_id: string, options?: any): void;
+
     createNode<T extends LGraphNode = LGraphNode>(type: string): T;
     /** Register a node class so it can be listed when the user wants to create a new one */
     registerNodeType(type: string, base: { new (): LGraphNode }): void;
