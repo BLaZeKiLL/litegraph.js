@@ -225,9 +225,6 @@ export const LiteGraph: {
         }
     >;
 
-    /** Editor constructor */
-    Editor(container_id: string, options?: any): void;
-
     createNode<T extends LGraphNode = LGraphNode>(type: string): T;
     /** Register a node class so it can be listed when the user wants to create a new one */
     registerNodeType(type: string, base: { new (): LGraphNode }): void;
@@ -294,6 +291,7 @@ export const LiteGraph: {
     getTime(): number;
     LLink: typeof LLink;
     LGraph: typeof LGraph;
+    Editor: typeof Editor;
     DragAndScale: typeof DragAndScale;
     compareObjects(a: object, b: object): boolean;
     distance(a: Vector2, b: Vector2): number;
@@ -980,6 +978,14 @@ export declare class DragAndScale {
     changeScale(value: number, zooming_center?: Vector2): void;
     changeDeltaScale(value: number, zooming_center?: Vector2): void;
     reset(): void;
+}
+
+export declare class Editor {
+    constructor(container_id: string, options?: {
+        miniwindow: boolean
+    });
+    graph: typeof LGraph;
+    graphcanvas: typeof LGraphCanvas;
 }
 
 /**

@@ -3,7 +3,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     projectFiles: [
       'src/litegraph.js',
-      'src/litegraph-editor.js',
+      //'src/litegraph-editor.js',
       'src/nodes/base.js',
     ],
     concat: {
