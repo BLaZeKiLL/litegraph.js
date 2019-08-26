@@ -26,7 +26,6 @@
     "files": [
         "build",
         "css",
-        "demo/imgs",
         "src/litegraph.d.ts"
     ],
     "bugs": {
