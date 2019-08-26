@@ -291,6 +291,7 @@ export const LiteGraph: {
     getTime(): number;
     LLink: typeof LLink;
     LGraph: typeof LGraph;
+    Editor: typeof Editor;
     DragAndScale: typeof DragAndScale;
     compareObjects(a: object, b: object): boolean;
     distance(a: Vector2, b: Vector2): number;
@@ -977,6 +978,14 @@ export declare class DragAndScale {
     changeScale(value: number, zooming_center?: Vector2): void;
     changeDeltaScale(value: number, zooming_center?: Vector2): void;
     reset(): void;
+}
+
+export declare class Editor {
+    constructor(container_id: string, options?: {
+        miniwindow: boolean
+    });
+    graph: typeof LGraph;
+    graphcanvas: typeof LGraphCanvas;
 }
 
 /**
