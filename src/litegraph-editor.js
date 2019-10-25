@@ -220,21 +220,28 @@
         this.maximize();
     };
 
-    Editor.prototype.addMiniWindow = function(w, h) {
-        var miniwindow = document.createElement("div");
-        miniwindow.className = "litegraph miniwindow";
-        miniwindow.innerHTML =
-            "<canvas class='graphcanvas' width='" +
-            w +
-            "' height='" +
-            h +
-            "' tabindex=10></canvas>";
-        var canvas = miniwindow.querySelector("canvas");
-        var that = this;
+Editor.prototype.addMiniWindow = function(w, h) {
+    var miniwindow = document.createElement("div");
+    miniwindow.className = "litegraph miniwindow";
+    miniwindow.innerHTML =
+        "<canvas class='graphcanvas' width='" +
+        w +
+        "' height='" +
+        h +
+        "' tabindex=10></canvas>";
+    var canvas = miniwindow.querySelector("canvas");
+    var that = this;
 
-        var graphcanvas = new LGraphCanvas(canvas, this.graph);
-        graphcanvas.show_info = false;
-        graphcanvas.background_image = "imgs/grid.png";
+    var graphcanvas = new LGraphCanvas(canvas, this.graph);
+    graphcanvas.show_info = false;
+    graphcanvas.background_image = "imgs/grid.png";
+    graphcanvas.scale = 0.25;
+    graphcanvas.allow_dragnodes = false;
+    graphcanvas.allow_interaction = false;
+    graphcanvas.render_shadows = false;
+    graphcanvas.max_zoom = 0.25;
+    this.miniwindow_graphcanvas = graphcanvas;
+    graphcanvas.onClear = function() {
         graphcanvas.scale = 0.25;
         graphcanvas.allow_dragnodes = false;
         graphcanvas.allow_interaction = false;
