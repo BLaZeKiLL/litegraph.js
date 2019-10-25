@@ -984,8 +984,8 @@ export declare class Editor {
     constructor(container_id: string, options?: {
         miniwindow: boolean
     });
-    graph: typeof LGraph;
-    graphcanvas: typeof LGraphCanvas;
+    graph: LGraph;
+    graphcanvas: LGraphCanvas;
 }
 
 /**
