@@ -10718,10 +10718,13 @@ LGraphNode.prototype.executeAction = function(action)
 })(this);
 
 if (typeof exports != "undefined") {
+    console.log('LITEGRAPH EXPORT');
     exports.LiteGraph = this.LiteGraph;
 }
 
 (function(global) {
+    var LiteGraph = global.LiteGraph;
+
     //Creates an interface to access extra features from a graph (like play, stop, live, etc)
     function Editor(container_id, options) {
         options = options || {};

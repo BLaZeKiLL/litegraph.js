@@ -10718,5 +10718,6 @@ LGraphNode.prototype.executeAction = function(action)
 })(this);
 
 if (typeof exports != "undefined") {
+    console.log('LITEGRAPH EXPORT');
     exports.LiteGraph = this.LiteGraph;
 }
