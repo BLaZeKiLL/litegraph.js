@@ -3,7 +3,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     projectFiles: [
       'src/litegraph.js',
-      //'src/litegraph-editor.js',
+      'src/litegraph-editor.js',
       'src/nodes/base.js',
     ],
     concat: {
@@ -13,7 +13,6 @@ module.exports = function (grunt) {
       }
     },
     closureCompiler: {
-
       options: {
         compilerFile: 'node_modules/google-closure-compiler/compiler.jar',
         compilerOpts: {
@@ -29,10 +28,8 @@ module.exports = function (grunt) {
         dest: 'build/litegraph.min.js'
       }
     }
-  })
-
-  grunt.loadNpmTasks('grunt-contrib-concat')
-  grunt.loadNpmTasks('grunt-closure-tools')
-
-  grunt.registerTask('build', ['concat:build', 'closureCompiler'])
+  });
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-closure-tools');
+  grunt.registerTask('build', ['concat:build', 'closureCompiler']);
 }

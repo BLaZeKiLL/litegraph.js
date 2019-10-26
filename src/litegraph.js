@@ -111,15 +111,9 @@
                 console.log("Node registered: " + type);
             }
 
-            var categories = type.split("/");
             var classname = base_class.name;
-
-            var pos = type.lastIndexOf("/");
-            base_class.category = type.substr(0, pos);
-
-            if (!base_class.title) {
-                base_class.title = classname;
-            }
+            base_class.category = type.split('/')[0];
+            base_class.title = type.split('/')[1];
             //info.name = name.substr(pos+1,name.length - pos);
 
             //extend class

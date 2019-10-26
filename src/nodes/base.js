@@ -334,6 +334,7 @@
 		}
 		else if( name == "value" )
 		{
+            console.log('GRAPH INPUT VALUE');
 		}
 	}
 
@@ -367,7 +368,7 @@
     };
 
     LiteGraph.GraphInput = GraphInput;
-    LiteGraph.registerNodeType("graph/input", GraphInput);
+    LiteGraph.registerNodeType("Graph/Input", GraphInput);
 
     //Output for a subgraph
     function GraphOutput() {
@@ -471,5 +472,5 @@
     };
 
     LiteGraph.GraphOutput = GraphOutput;
-    LiteGraph.registerNodeType("graph/output", GraphOutput);
+    LiteGraph.registerNodeType("Graph/Output", GraphOutput);
 })(this);
