@@ -3,7 +3,6 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     projectFiles: [
       'src/litegraph.js',
-      'src/litegraph-editor.js',
       'src/nodes/base.js',
     ],
     concat: {
@@ -17,7 +16,7 @@ module.exports = function (grunt) {
         compilerFile: 'node_modules/google-closure-compiler/compiler.jar',
         compilerOpts: {
           formatting: 'pretty_print',
-          warning_level: 'default'
+          warning_level: 'default',
         },
         d32: false, // will use 'java -client -d32 -jar compiler.jar'
         TieredCompilation: false// will use 'java -server -XX:+TieredCompilation -jar compiler.jar',
